@@ -7,11 +7,10 @@ Ce projet prolonge directement l'expérience au CHRU de Tours et démontre
 une maîtrise des données cliniques complexes.
 
 ## Dataset
-**Diabetes 130-US Hospitals** — données cliniques synthétiques
-inspirées du dataset UCI (Clore et al., 1994-1999)
+**Diabetes 130-US Hospitals** —Diabetes 130-US Hospitals — UCI Machine Learning Repository (Clore et al., 1994-1999)
 - Fichier : `diabetes_readmission.csv`
 - 5000 patients, 15 variables cliniques
-- Taux de réadmission : ~6-8% (classe très minoritaire → défi ML)
+- Taux de réadmission : ~11% (classe très minoritaire → défi ML)
 
 ### Variables
 | Variable | Description |
@@ -62,7 +61,7 @@ pip install pandas numpy scikit-learn xgboost imbalanced-learn shap matplotlib s
 - Note : classe très déséquilibrée → accuracy trompeuse, se fier à l'AUC et au rappel
 
 ## Points clés à comprendre
-1. **Déséquilibre extrême** (~6%) → SMOTE + scale_pos_weight indispensables
+1. **Déséquilibre extrême** (~11%) → SMOTE + scale_pos_weight indispensables
 2. **Rappel > Précision** — en médecine, manquer un cas (FN) est plus grave que sur-alerter (FP)
 3. **SHAP pour les médecins** — traduire les prédictions en facteurs cliniques compréhensibles
 4. **Validation externe** — toujours tester sur un hôpital différent avant de déployer
